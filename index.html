@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIT Pulse — Find Your VIT Twin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="landing" class="screen active">
+      <div class="badge">VIT PULSE • V1</div>
+      <h1>Find your <span>VIT Twin.</span></h1>
+      <p class="lead">Answer a few questions. Get your VIT type. Then discover the participating student whose answers are most similar to yours.</p>
+      <div class="card privacy">
+        <strong>Opt-in experiment</strong>
+        <p>Your answers stay in this browser in V1. No VIT credentials, student records, or scraped photos are used.</p>
+      </div>
+      <button id="startBtn" class="primary">Start the experiment →</button>
+      <p class="tiny">No account • Free • Works entirely in your browser</p>
+    </section>
+
+    <section id="quiz" class="screen">
+      <div class="topline">
+        <span id="progressText">Question 1 of 10</span>
+        <span id="scoreHint">VIT PULSE</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="question-card">
+        <div class="question-number" id="questionNumber">01</div>
+        <h2 id="question"></h2>
+        <div id="options" class="options"></div>
+      </div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="badge">YOUR VIT TYPE</div>
+      <div class="result-card">
+        <p class="eyebrow">YOU ARE</p>
+        <h1 id="resultTitle"></h1>
+        <p id="resultDescription"></p>
+        <div id="traits" class="traits"></div>
+      </div>
+      <div class="card twin">
+        <p class="eyebrow">YOUR STATISTICAL TWIN</p>
+        <h2 id="twinTitle"></h2>
+        <div class="similarity"><span id="similarityValue">0%</span> similarity</div>
+        <p id="twinDescription"></p>
+        <p class="tiny">This is a similarity score based only on quiz answers—not a claim about real-life personality.</p>
+      </div>
+      <div class="actions">
+        <button id="shareBtn" class="primary">Share my result</button>
+        <button id="againBtn" class="secondary">Take it again</button>
+      </div>
+      <p id="shareStatus" class="share-status"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
